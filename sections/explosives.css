@@ -1,0 +1,93 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  background-color: #1D1E2C;
+  color: #FFFFFF;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+#sidenav {
+  height: 100%;
+  width: 0;  /* Sidenav is hidden initially */
+  position: fixed;
+  z-index: 2;  /* Ensures sidenav is above other content */
+  top: 0;
+  left: 0;
+  background-color: #116466; /* Stylish blue-green for the background */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  transition: 0.5s; /* Smooth transition for opening and closing */
+  padding-top: 60px; /* Space at the top */
+  font-family: 'League Spartan', sans-serif; /* Modern, geometric font for navigation */
+}
+
+#sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+#sidenav a:hover {
+  color: #116466;
+  background-color: #FFFFFF;
+}
+
+#main {
+  padding: 20px;
+}
+
+#content h1, .collapsible h2 {
+  font-family: 'League Spartan', sans-serif; /* Modern, bold look for titles */
+}
+
+.collapsible h2 {
+  font-size: 22px; /* Appropriate size for sub-headings */
+    margin-left: 0px;
+}
+
+.collapsible .content {
+  background-color: #453643; /* Eggplant for content backgrounds */
+  font-size: 20px; 
+  color: #FFFFFF; /* White for text */
+  padding: 10px;
+   border-radius: 35px; /* Rounded corners for a softer look */
+  margin-top: 5px;
+    margin-left: 25px;
+  text-align: left;
+  line-height: 1.4em
+}
+
+.notes span {
+  font-family: 'League Spartan', sans-serif; /* Consistent with other headers */
+  cursor: pointer;
+  display: block; /* Ensures the span behaves as a block element */
+  text-align: right; /* Right-aligns the note toggle */
+  color: #9f9;
+}
+
+  
+.notes .note {
+  display: none; /* Hidden initially, shown on click */
+  padding: 40px; /* Adds space inside the note */
+  margin-top: 10px; /* Adds space between notes */
+  background-color: #2D3E50; /* Slightly lighter than the main content background for contrast */
+  color: #FFFFFF; /* White text for readability */
+  border: 8px solid #FFFFFF; /* White border for visibility */
+  border-radius: 35px; /* Rounded corners for a softer look */
+  text-align: left; /* Aligns the text to the left */
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  line-height: 1.8em
+}

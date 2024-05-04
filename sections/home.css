@@ -1,0 +1,114 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  background-color: #1d1e2c;
+  color: #ffffff;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+#sidenav {
+  height: 100%;
+  width: 0; /* Sidenav is hidden initially */
+  position: fixed;
+  z-index: 2; /* Ensures sidenav is above other content */
+  top: 0;
+  left: 0;
+  background-color: #116466; /* Stylish blue-green for the background */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  transition: 0.5s; /* Smooth transition for opening and closing */
+  padding-top: 60px; /* Space at the top */
+  font-family: "League Spartan", sans-serif; /* Modern, geometric font for navigation */
+}
+
+#sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+#sidenav a:hover {
+  color: #116466;
+  background-color: #ffffff;
+}
+
+#hiddentext {
+  padding: 20px;
+  transition: margin-left 0.5s;
+  /* Initially, main content should not be pushed by the sidebar */
+  margin-left: 0;
+  margin-top: 40px;
+}
+
+#hiddenText h2,
+#hiddenText h3 {
+  margin: 0;
+  padding: 0.025em 0; /* Adds vertical padding without horizontal padding */
+}
+
+#hiddenText p {
+  font-size: 16px;
+  margin-top: 1em; /* Adds space above the paragraph */
+  line-height: 1.8;
+}
+
+/* When the sidebar is open, increase the left margin of the main content */
+.sidebar-open #hiddentext {
+  margin-left: 250px; /* Adjust this value to match the sidebar's width */
+}
+
+/* Welcome screen and hidden text styling for consistency */
+#welcomeScreen,
+#hiddenText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  transition: opacity 2s ease-in-out; /* Smooth transition for fading */
+  opacity: 1; /* Initial opacity for welcomeScreen */
+}
+
+#hiddenText {
+  display: none; /* Starts hidden */
+  opacity: 0; /* Starts fully transparent */
+}
+
+button {
+  transition: background-color 0.2s, color 0.2s; /* Transition for button hover effects */
+}
+@media (min-width: 768px) {
+  #welcomeScreen,
+  #hiddenText {
+    font-size: 1.25rem; /* Slightly larger font for better readability on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  #welcomeScreen,
+  #hiddenText {
+    font-size: 1.5rem; /* Appropriate font size for desktop views */
+  }
+}
+
+body.sidebar-open #hiddenText {
+  margin-left: 250px; /* Adjust this value to match the sidebar's width */
+  padding-left: 20px;
+}
